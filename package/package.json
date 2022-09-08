@@ -1,7 +1,7 @@
 {
   "name": "n-krypta",
-  "version": "1.0.0",
-  "description": "A simplle encrypting and decrypting package",
+  "version": "1.1.0",
+  "description": "A simple encrypting and decrypting package",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node build/index.js",
@@ -23,7 +23,17 @@
       "^.+\\.tsx?$": "ts-jest"
     }
   },
-  "keywords": [],
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "crypto",
+    "hash",
+    "hashing",
+    "encryption",
+    "decryption",
+    "n-krypta",
+    "password"
+  ],
   "author": "Samuel Egbajie",
   "license": "ISC",
   "bugs": {
