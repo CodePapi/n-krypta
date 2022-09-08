@@ -6,10 +6,11 @@ This package allows you to encrypt and decrypt short strings using a key. It is 
 
 ```bash
 npm install n-krypta or yarn add n-krypta
+```
+
+```
 for typescript
 npm install @types/n-krypta or yarn add @types/n-krypta
-```
-```
 ```
 
 ### Usage
