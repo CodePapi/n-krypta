@@ -1,0 +1,60 @@
+{
+    // "extends": [
+    //   "eslint:recommended",
+    //   "plugin:import/recommended",
+    //   "plugin:import/typescript",
+    //   "airbnb-base"
+    // ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".ts"]
+        }
+      }
+    },
+    "plugins": ["@typescript-eslint", "prettier"],
+    "env": {
+      "browser": false,
+      "es6": true,
+      "node": true,
+      "jest": true
+    },
+    "rules": {
+      "@typescript-eslint/semi": ["error"],
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/restrict-template-expressions": "off",
+      "@typescript-eslint/restrict-plus-operands": "off",
+      "@typescript-eslint/no-unsafe-member-access": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "no-underscore-dangle": "off",
+      "no-case-declarations": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "ts": "never"
+        }
+      ]
+    },
+    // "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "overrides": [
+      {
+        "files": ["*.ts"],
+        "rules": {
+          "max-len": ["error", { "code": 120 }],
+          "linebreak-style": 0
+        }
+      }
+    ]
+  }
