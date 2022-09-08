@@ -1,4 +1,4 @@
-## How to use this package crypta
+## How to use this package n-krypta
 
 This package allows you to encrypt and decrypt short strings using a key. It is based on the [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm.
 
@@ -11,7 +11,7 @@ npm install n-krypta
 ### Usage
 
 ```javascript
-const crypta = require('crypta');
+const crypta = require('n-rypta');
 
 const key = 'my secret key';
 const text = 'my secret text';
@@ -42,6 +42,6 @@ This package allows you to encrypt and decrypt short strings using a key. It is 
 ### Installation
 
 ```bash
-npm install crypta
+npm install n-krypta
 ```
 
