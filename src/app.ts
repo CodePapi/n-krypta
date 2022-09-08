@@ -7,7 +7,7 @@ const hash = (str:string) =>
 const offset = (num:number, i:number) =>
   parseInt(num.toString().charAt(i % num.toString().length));
 
-export const encryptPassword = (st:string, sa:string, d = 1) =>{
+export const encrypt = (st:string, sa:string, d = 1) =>{
   const hashSalt:number=hash(sa)
   return st
     .split("")
@@ -15,14 +15,16 @@ export const encryptPassword = (st:string, sa:string, d = 1) =>{
     .join("");
 
 }
-export const decryptPassword = (str:string, salt:string) => {
-  return encryptPassword(str, salt, -1);}
+export const decrypt = (str:string, salt:string) => {
+  return encrypt(str, salt, -1);}
 
 const salt = "test";
 const str = "My name is john bosco";
 
-const scram = encryptPassword(str, salt);
-const unscram = decryptPassword(scram, salt);
+const scram = encrypt(str, salt);
+const unscram = decrypt(scram, salt);
 
-console.log("encryptPassword:", scram);
-console.log("decryptPassword:", unscram);
+console.log("encrypt:", scram);
+console.log("decrypt:", unscram);
+
+export default { encrypt, decrypt };
