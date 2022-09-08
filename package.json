@@ -1,20 +1,21 @@
 {
-  "name": "crypta",
-  "version": "1.0.0",
+  "name": "n-krypta",
+  "version": "1.2.1",
   "description": "A simplle encrypting and decrypting package",
-  "main": "index.js",
   "scripts": {
     "start": "npm run build && node build/index.js",
+    "build": "tsc",
     "start:dev": "nodemon",
-    "build": "rimraf ./build && tsc",
     "test:dev": "jest  --verbose --watchAll",
     "test": "jest",
     "lint": "eslint --ext .ts ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CodePapi/crypta.git"
+    "url": "git+https://github.com/CodePapi/n-krypta.git"
   },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "jest": {
     "preset": "ts-jest",
     "clearMocks": true,
@@ -27,9 +28,9 @@
   "author": "Samuel Egbajie",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CodePapi/crypta/issues"
+    "url": "https://github.com/CodePapi/n-krypta/issues"
   },
-  "homepage": "https://github.com/CodePapi/crypta#readme",
+  "homepage": "https://github.com/CodePapi/n-krypta#readme",
   "devDependencies": {
     "@types/jest": "^29.0.0",
     "@types/node": "^18.7.16",
@@ -41,8 +42,5 @@
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.2"
-  },
-  "dependencies": {
-    "ts-jest": "^28.0.8"
   }
 }

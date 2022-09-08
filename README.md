@@ -5,7 +5,11 @@ This package allows you to encrypt and decrypt short strings using a key. It is 
 ### Installation
 
 ```bash
-npm install n-krypta
+npm install n-krypta or yarn add n-krypta
+for typescript
+npm install @types/n-krypta or yarn add @types/n-krypta
+```
+```
 ```
 
 ### Usage
@@ -13,8 +17,8 @@ npm install n-krypta
 ```javascript
 const crypta = require('n-rypta');
 
-const key = 'my secret key';
-const text = 'my secret text';
+const key = 'my secret key'; // more than 16 characters is recommended, make sure it is the same for encryption and decryption and also kept secret
+const text = 'my secret text'; 
 
 const encrypted = crypta.encrypt(text, key);
 const decrypted = crypta.decrypt(encrypted, key);
