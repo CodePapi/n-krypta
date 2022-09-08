@@ -1,7 +1,7 @@
 {
   "name": "crypta",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simplle encrypting and decrypting package",
   "main": "index.js",
   "scripts": {
     "start": "npm run build && node build/index.js",
