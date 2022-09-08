@@ -5,7 +5,7 @@ This package allows you to encrypt and decrypt short strings using a key. It is 
 ### Installation
 
 ```bash
-npm install crypta
+npm install n-krypta
 ```
 
 ### Usage
