@@ -48,8 +48,8 @@ encrypt, decrypt, hash,
 
 ### Repository
 
-(https://github.com/CodePapi/n-krypta) [https://github.com/CodePapi/n-krypta]
+(Repo)[https://github.com/CodePapi/n-krypta]
 
 ### Homepage
 
-(https://github.com/CodePapi/n-krypta) [https://github.com/CodePapi/n-krypta]
+https://github.com/CodePapi/n-krypta) [https://github.com/CodePapi/n-krypta]
