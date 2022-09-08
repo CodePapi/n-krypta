@@ -1,4 +1,6 @@
 ## How to use n-krypta package
+n-krypta is an npm package that allows you to encrypt and decrypt sensitive data using a key. It is based on a strong algorithm.
+It is very easy to use, just follow the steps below:
 
 ### Installation
 
