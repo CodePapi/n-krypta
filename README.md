@@ -1,52 +1,55 @@
-## How to use this package n-krypta
-
-This package allows you to encrypt and decrypt short strings using a key. It is based on the [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm.
+## How to use n-krypta package
 
 ### Installation
 
-```bash
-npm install n-krypta or yarn add n-krypta
-```
-
-```
-for typescript
-npm install @types/n-krypta or yarn add @types/n-krypta
+```javascript
+npm install n-krypta --save or yarn add n-krypta
 ```
 
 ### Usage
 
 ```javascript
-const crypta = require('n-rypta');
+const { encrypt, decrypt } = require('n-krypta');
 
-const key = 'my secret key'; // more than 16 characters is recommended, make sure it is the same for encryption and decryption and also kept secret
-const text = 'my secret text'; 
+const secret = 'secret'; // secret key for encryption
 
-const encrypted = crypta.encrypt(text, key);
-const decrypted = crypta.decrypt(encrypted, key);
+const encrypted = encrypt('Hello World', secret); // encrypts the string
 
-\`\`\`
+const decrypted = decrypt(encrypted, secret); // decrypts the string
 
-### API
+console.log(encrypted); // prints the encrypted string
 
-#### encrypt(text, key)
-
-Encrypts the given text using the given key.
-
-#### decrypt(encrypted, key)
-
-Decrypts the given encrypted text using the given key.
+console.log(decrypted); // prints the decrypted string
+```
 
 ### License
 
 MIT
 
-## How to use this package crypta
+### Author
 
-This package allows you to encrypt and decrypt short strings using a key. It is based on the [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) algorithm.
+Samuel Egbajie (CodePapi on Github)
 
-### Installation
+### Contributing
 
-```bash
-npm install n-krypta
-```
+Contributions are welcome. Please open an issue or a pull request.
 
+### Disclaimer
+
+This package is not meant to be used for production. It is just a simple package for encrypting and decrypting strings.
+
+### Keywords
+
+encrypt, decrypt, hash,
+
+### Version
+
+1.0.0
+
+### Repository
+
+(https://github.com/CodePapi/n-krypta)[https://github.com/CodePapi/n-krypta]
+
+### Homepage
+
+(https://github.com/CodePapi/n-krypta)[https://github.com/CodePapi/n-krypta]
