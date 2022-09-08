@@ -24,7 +24,7 @@
       "^.+\\.tsx?$": "ts-jest"
     }
   },
-  "keywords": [],
+  "keywords": ["encrypt", "decrypt", "n-krypta", "hash", "hashing", "encryption", "decryption"],
   "author": "Samuel Egbajie",
   "license": "ISC",
   "bugs": {
