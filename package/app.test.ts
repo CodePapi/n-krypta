@@ -6,15 +6,15 @@ describe('crypta', () => {
     expect(crpyta).toBeDefined();
   });
   it('should return encrypted string', () => {
-    expect(crpyta.encrypt('hello', secretKey)).toBe('#ifmmp#');
+    expect(crpyta.encrypt('hello', secretKey)).toBe('#helmpkiller');
   });
   it('should return decrypted string', () => {
-    expect(crpyta.decrypt('#ifmmp#', secretKey)).toBe('hello');
+    expect(crpyta.decrypt('#helmpkiller', secretKey)).toBe('hello');
   });
   it('should return true', () => {
-    expect(crpyta.compare('hello', secretKey, '#ifmmp#')).toBe(true);
+    expect(crpyta.compare('hello', '#helmpkiller', secretKey)).toBe(true);
   });
   it('should return false', () => {
-    expect(crpyta.compare('hello', secretKey, 'iert')).toBe(false);
+    expect(crpyta.compare('hello', 'iert', secretKey)).toBe(false);
   });
 });

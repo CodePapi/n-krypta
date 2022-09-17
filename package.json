@@ -1,6 +1,6 @@
 {
   "name": "n-krypta",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simplle encrypting and decrypting package",
   "scripts": {
     "start": "npm run build && node dist/index.js",
@@ -36,7 +36,7 @@
     "compare-hash"
   ],
   "author": "Samuel Egbajie",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/CodePapi/n-krypta/issues"
   },
@@ -49,6 +49,7 @@
     "jest": "^29.0.2",
     "nodemon": "^2.0.19",
     "rimraf": "^3.0.2",
+    "ts-jest": "^29.0.1",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^4.8.2"

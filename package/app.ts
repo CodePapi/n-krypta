@@ -1,18 +1,14 @@
-const hash = (str: string) =>
-  str.split('').reduce((hash, char) => {
-    hash = 1;
-    return hash & hash;
-  }, 0);
+import { hashFun } from './hashFun';
 
-const offset = (num: number, i: number) =>
+const configNum = (num: number, i: number) =>
   parseInt(num.toString().charAt(i % num.toString().length));
 
 const encrypta = (st: string, salt: string, d = 1) => {
-  const hashSalt: number = hash(salt.toLocaleLowerCase().trim());
+  const hashSalt: number = hashFun(salt.trim());
   return st
     .split('')
     .map((c, i) =>
-      String.fromCharCode(c.charCodeAt(0) + offset(hashSalt, i) * d)
+      String.fromCharCode(c.charCodeAt(0) + configNum(hashSalt, i) * d)
     )
     .join('');
 };
@@ -22,11 +18,11 @@ export const encrypt = (
   salt: string,
   d = 1
 ) => {
-  const hashSalt: number = hash(salt.toLocaleLowerCase().trim());
+  const hashSalt: number = hashFun(salt.trim());
   return JSON.stringify(param)
     .split('')
     .map((c, i) =>
-      String.fromCharCode(c.charCodeAt(0) + offset(hashSalt, i) * d)
+      String.fromCharCode(c.charCodeAt(0) + configNum(hashSalt, i) * d)
     )
     .join('')
     .replace(/\\/g, 'blacard')
@@ -49,7 +45,7 @@ export const decrypt = (str: string, salt: string) => {
       .replace(/alpha/g, '{')
       .replace(/mega/g, '}')
       .replace(/omega/g, '`'),
-    salt.toLocaleLowerCase().trim(),
+    salt.trim(),
     -1
   );
   try {
@@ -59,8 +55,8 @@ export const decrypt = (str: string, salt: string) => {
   }
 };
 
-export const compare = (str: string, salt: string, hash: string) => {
-  return decrypt(hash, salt) === str;
+export const compare = (string: string, hash: string, salt: string) => {
+  return decrypt(hash, salt.trim()) === string;
 };
 
 export default { encrypt, decrypt, compare };
