@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "description": "A simplle encrypting and decrypting package",
   "scripts": {
-    "start": "npm run build && node build/index.js",
+    "start": "npm run build && node dist/index.js",
     "build": "tsc",
     "start:dev": "nodemon",
     "test:dev": "jest  --verbose --watchAll",
@@ -24,7 +24,17 @@
       "^.+\\.tsx?$": "ts-jest"
     }
   },
-  "keywords": ["encrypt", "decrypt", "n-krypta", "hash", "hashing", "encryption", "decryption"],
+  "keywords": [
+    "encrypt",
+    "decrypt",
+    "n-krypta",
+    "hash",
+    "hashing",
+    "encryption",
+    "decryption",
+    "compare",
+    "compare-hash"
+  ],
   "author": "Samuel Egbajie",
   "license": "ISC",
   "bugs": {
