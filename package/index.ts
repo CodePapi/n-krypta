@@ -1,1 +1,1 @@
-export { encrypt, decrypt, compare, } from './app';
+export { encrypt, decrypt, compare } from './app';
