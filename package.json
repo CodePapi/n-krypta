@@ -1,7 +1,7 @@
 {
   "name": "n-krypta",
-  "version": "1.0.3",
-  "description": "A simplle encrypting and decrypting package",
+  "version": "1.0.4",
+  "description": "A simple encrypting and decrypting package",
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "build": "tsc",
