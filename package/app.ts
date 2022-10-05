@@ -4,7 +4,7 @@ const configNum = (num: number, i: number) =>
   parseInt(num.toString().charAt(i % num.toString().length));
 
 const encrypta = (st: string, salt: string, d = 1) => {
-  const hashSalt: number = hashFun(salt.trim());
+  const hashSalt: number = hashFun(salt.trim().substring(0, 20));
   return st
     .split('')
     .map((c, i) =>
@@ -18,7 +18,7 @@ export const encrypt = (
   salt: string,
   d = 1
 ) => {
-  const hashSalt: number = hashFun(salt.trim());
+  const hashSalt: number = hashFun(salt.trim().substring(0, 20));
   return JSON.stringify(param)
     .split('')
     .map((c, i) =>
@@ -56,7 +56,7 @@ export const decrypt = (str: string, salt: string) => {
 };
 
 export const compare = (string: string, hash: string, salt: string) => {
-  return decrypt(hash, salt.trim()) === string;
+  return decrypt(hash, salt.trim().substring(0, 20)) === string;
 };
 
 export default { encrypt, decrypt, compare };
