@@ -14,26 +14,21 @@ const encrypta = (st: string, salt: string, d = 1) => {
 };
 
 export const encrypt = (
-  param: Object | string | number | any[],
-  salt: string,
-  d = 1
+    param: Object | string | number | any[],
+    salt: string,
+    d = 1
 ) => {
-  const hashSalt: number = hashFun(salt.trim().substring(0, 20));
-  return JSON.stringify(param)
-    .split('')
-    .map((c, i) =>
-      String.fromCharCode(c.charCodeAt(0) + configNum(hashSalt, i) * d)
-    )
-    .join('')
-    .replace(/\\/g, 'blacard')
-    .replace(/\//g, 'danger')
-    .replace(/"/g, 'killer')
-    .replace(/'/g, 'terror')
-    .replace(/ /g, 'blankart')
-    .replace(/{/g, 'alpha')
-    .replace(/}/g, 'mega')
-    .replace(/`/g, 'omega');
+    return encrypta(JSON.stringify(param), salt, d)
+        .replace(/\\/g, 'blacard')
+        .replace(/\//g, 'danger')
+        .replace(/"/g, 'killer')
+        .replace(/'/g, 'terror')
+        .replace(/ /g, 'blankart')
+        .replace(/{/g, 'alpha')
+        .replace(/}/g, 'mega')
+        .replace(/`/g, 'omega');
 };
+
 export const decrypt = (str: string, salt: string) => {
   let encryption = encrypta(
     str
